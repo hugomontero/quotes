@@ -1,0 +1,44 @@
+{
+  "name": "quotes",
+  "version": "1.0.0",
+  "description": "Retrieve and create a list of quotes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomontero/quotes.git"
+  },
+  "author": "hugo.montero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugomontero/quotes/issues"
+  },
+  "homepage": "https://github.com/hugomontero/quotes#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.12",
+    "mysql": "^2.18.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npx prettier --write src/* && npx eslint --fix src/* && npx jest"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2"
+  }
+}
